@@ -21,3 +21,4 @@
 - GenerateDatasets(generate training datasets in normal state and restrained state)
 - TuningParameters
 - Different_parts_IsolationForest(generate plots for different parts)
+#### When using these files, please put the datasets to the same file(read files by using relative path)
