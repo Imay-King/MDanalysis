@@ -14,7 +14,7 @@
 - Generate_original_Data
 - Generate non-hydrogen_Data
 - Shuffle_data
-- Experiment1Classification(use SVM to the binary classification)
+- MethodsCompareClassificaiton(compare different methods and use SVM to the binary classification at last)
 2. Experiment 2
 - Alanine13_original
 - Datasets(generative_original, generative_non-hygrogen)
