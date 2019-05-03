@@ -58,8 +58,8 @@ def plot_graphs(R,R_res,list):
     figure, ax = plt.subplots(figsize=(15, 15))
     plot_original, = plt.plot(frames, rmsd[2][::5], 'b--', label="Original Frames")
     plot_res, = plt.plot(frames, rmsd_res[2][::5], 'g--', label="Restrained Frames")
-    for i in list:
-        plt.plot(i, rmsd[2][::5][i], 'o', c='red')
+    for i in list:					#plot different points to the figure
+        plt.plot(i, rmsd[2][::5][i], 'o', c='red')    
     plt.legend(loc="best")
     plt.xlabel("Frames", font1)
     plt.ylabel(r"RMSD ($\AA$)", font1)
@@ -87,7 +87,7 @@ if __name__ == '__main__':
     R3 = MDAnalysis.analysis.rms.RMSD(universe,
                                       select='resid 10:13 and not name H*')
     R3.run()
-    R1_res = MDAnalysis.analysis.rms.RMSD(universe_res,
+    R1_res = MDAnalysis.analysis.rms.RMSD(universe_res,								#add res as reference
                                           select='resid 1:4 and not name H*')
     R1_res.run()
     R2_res = MDAnalysis.analysis.rms.RMSD(universe_res,
